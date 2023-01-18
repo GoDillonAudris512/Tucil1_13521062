@@ -1,0 +1,38 @@
+Untuk susunan kartu: A, Q, K, J
+
+Solusi Permainan Kartu 24: 
+1. (A * Q) * (K - J)
+2. A * (Q * (K - J))
+3. ((A * K) - J) * Q
+4. (A * (K - J)) * Q
+5. A * ((K - J) * Q)
+6. (Q * A) * (K - J)
+7. (Q / A) * (K - J)
+8. Q * ((A * K) - J)
+9. Q * (A * (K - J))
+10. Q / (A / (K - J))
+11. Q * ((K * A) - J)
+12. Q * ((K / A) - J)
+13. Q * (K - (A * J))
+14. (Q * (K - J)) * A
+15. (Q * (K - J)) / A
+16. Q * ((K - J) * A)
+17. Q * ((K - J) / A)
+18. Q * (K - (J * A))
+19. Q * (K - (J / A))
+20. ((K * A) - J) * Q
+21. ((K / A) - J) * Q
+22. (K - (A * J)) * Q
+23. (K - J) * (A * Q)
+24. (K - J) / (A / Q)
+25. ((K - J) * A) * Q
+26. ((K - J) / A) * Q
+27. (K - (J * A)) * Q
+28. (K - (J / A)) * Q
+29. (K - J) * (Q * A)
+30. (K - J) * (Q / A)
+31. ((K - J) * Q) * A
+32. ((K - J) * Q) / A
+
+Banyak solusi: 32
+Waktu eksekusi: 177 mikrodetik

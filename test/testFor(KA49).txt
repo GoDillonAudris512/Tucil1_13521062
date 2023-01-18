@@ -1,0 +1,22 @@
+Untuk susunan kartu: K, A, 4, 9
+
+Solusi Permainan Kartu 24: 
+1. (A - K) + (4 * 9)
+2. A - (K - (4 * 9))
+3. (A - K) + (9 * 4)
+4. A - (K - (9 * 4))
+5. (A + (4 * 9)) - K
+6. A + ((4 * 9) - K)
+7. (A + (9 * 4)) - K
+8. A + ((9 * 4) - K)
+9. (4 * 9) - (K - A)
+10. ((4 * 9) - K) + A
+11. (4 * 9) + (A - K)
+12. ((4 * 9) + A) - K
+13. (9 * 4) - (K - A)
+14. ((9 * 4) - K) + A
+15. (9 * 4) + (A - K)
+16. ((9 * 4) + A) - K
+
+Banyak solusi: 16
+Waktu eksekusi: 118 mikrodetik
