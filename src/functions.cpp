@@ -130,62 +130,116 @@ string numToOperand (int num) {
     }
 }
 
+int countWords (string input) {
+//  Mengembalikan jumlah kata dalam suatu strings
+
+//  KAMUS LOKAL
+    int count = 0;
+    bool inWord = false;
+
+//  ALGORITMA
+    for (char CC : input) {
+        if (not(CC == ' ' || CC == '\n' || CC == '\0')) {
+            inWord = true;
+        }
+        else if ((CC == ' ' || CC == '\n' || CC == '\0') && inWord) {
+            count++;
+            inWord = false;
+        }
+    }
+
+    if (inWord) {
+        count++;
+        inWord = false;
+    }
+
+    return count;
+}
+
 void inputNum (int arr[]) {
 //  I.S Array arr berukuran 4 dan semua elemen bernilai 0
 //  F.S Array arr akan terisi dengan angka-angka yang bersesuaian dengan karakter yang dimasukkan oleh user
 
 //  KAMUS LOKAL
     string val;
-    int temp;
+    int temp, len;
 
 //  ALGORITMA
     cout << "Mohon masukkan 4 angka atau huruf yang sesuai (A, 2-10, J, Q, K)\n";
 
-    cout << "\nMohon masukkan angka atau huruf ke-1: ";
     while (arr[0] == 0) {
-        cin >> val;
-        temp = charToNum(val);
-        if (temp == -1) {
-            cout << "Input tidak valid\nMohon masukkan angka atau huruf ke-1: ";
+        cout << "\nMohon masukkan angka atau huruf ke-1: ";
+        getline(cin, val);
+        len = countWords(val);
+
+        if (len == 0 || len > 1) {
+            cout << "Input tidak valid";
         }
         else {
-            arr[0] = temp;
+            temp = charToNum(val);
+            if (temp == -1) {
+                cout << "Input tidak valid";
+            }
+            else {
+                arr[0] = temp;
+            }
         }
     }
 
-    cout << "\nMohon masukkan angka atau huruf ke-2: ";
     while (arr[1] == 0) {
-        cin >> val;
-        temp = charToNum(val);
-        if (temp == -1) {
-            cout << "Input tidak valid\nMohon masukkan angka atau huruf ke-2: ";
+        cout << "\nMohon masukkan angka atau huruf ke-2: ";
+        getline(cin, val);
+        len = countWords(val);
+
+        if (len == 0 || len > 1) {
+            cout << "Input tidak valid";
         }
         else {
-            arr[1] = temp;
+            temp = charToNum(val);
+            if (temp == -1) {
+                cout << "Input tidak valid";
+            }
+            else {
+                arr[1] = temp;
+            }
         }
     }
 
-    cout << "\nMohon masukkan angka atau huruf ke-3: ";
     while (arr[2] == 0) {
-        cin >> val;
-        temp = charToNum(val);
-        if (temp == -1) {
-            cout << "Input tidak valid\nMohon masukkan angka atau huruf ke-3: ";
+        cout << "\nMohon masukkan angka atau huruf ke-3: ";
+        getline(cin, val);
+        len = countWords(val);
+
+        if (len == 0 || len > 1) {
+            cout << "Input tidak valid";
         }
         else {
-            arr[2] = temp;
+            temp = charToNum(val);
+            if (temp == -1) {
+                cout << "Input tidak valid";
+            }
+            else {
+                arr[2] = temp;
+            }
         }
     }
 
-    cout << "\nMohon masukkan angka atau huruf ke-4: ";
     while (arr[3] == 0) {
-        cin >> val;
-        temp = charToNum(val);
-        if (temp == -1) {
-            cout << "Input tidak valid\nMohon masukkan angka atau huruf ke-4: ";
+        cout << "\nMohon masukkan angka atau huruf ke-4: ";
+        getline(cin, val);
+        len = countWords(val);
+
+        if (len == 0 || len > 1) {
+            cout << "Input tidak valid";
         }
         else {
-            arr[3] = temp;
+            temp = charToNum(val);
+            if (temp == -1) {
+                cout << "Input tidak valid";
+            }
+            else {
+                arr[3] = temp;
+            }
         }
     }
 }
