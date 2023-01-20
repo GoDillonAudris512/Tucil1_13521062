@@ -33,4 +33,4 @@ Solusi Permainan Kartu 24:
 30. 3 - ((5 - 8) * 7)
 
 Banyak solusi: 30
-Waktu eksekusi: 154 mikrodetik
+Waktu eksekusi: 138 mikrodetik

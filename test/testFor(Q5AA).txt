@@ -3,4 +3,4 @@ Untuk susunan kartu: Q, 5, A, A
 Solusi Permainan Kartu 24: 
 Tidak ada solusi yang mungkin
 
-Waktu eksekusi: 105 mikrodetik
+Waktu eksekusi: 58 mikrodetik

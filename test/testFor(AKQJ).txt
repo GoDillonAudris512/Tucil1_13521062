@@ -1,38 +1,38 @@
-Untuk susunan kartu: A, Q, K, J
+Untuk susunan kartu: A, K, Q, J
 
 Solusi Permainan Kartu 24: 
-1. (A * Q) * (K - J)
-2. A * (Q * (K - J))
-3. ((A * K) - J) * Q
-4. (A * (K - J)) * Q
-5. A * ((K - J) * Q)
-6. (Q * A) * (K - J)
-7. (Q / A) * (K - J)
-8. Q * ((A * K) - J)
-9. Q * (A * (K - J))
-10. Q / (A / (K - J))
-11. Q * ((K * A) - J)
-12. Q * ((K / A) - J)
-13. Q * (K - (A * J))
-14. (Q * (K - J)) * A
-15. (Q * (K - J)) / A
-16. Q * ((K - J) * A)
-17. Q * ((K - J) / A)
-18. Q * (K - (J * A))
-19. Q * (K - (J / A))
-20. ((K * A) - J) * Q
-21. ((K / A) - J) * Q
-22. (K - (A * J)) * Q
-23. (K - J) * (A * Q)
-24. (K - J) / (A / Q)
-25. ((K - J) * A) * Q
-26. ((K - J) / A) * Q
-27. (K - (J * A)) * Q
-28. (K - (J / A)) * Q
-29. (K - J) * (Q * A)
-30. (K - J) * (Q / A)
-31. ((K - J) * Q) * A
-32. ((K - J) * Q) / A
+1. ((A * K) - J) * Q
+2. (A * (K - J)) * Q
+3. A * ((K - J) * Q)
+4. (A * Q) * (K - J)
+5. A * (Q * (K - J))
+6. ((K * A) - J) * Q
+7. ((K / A) - J) * Q
+8. (K - (A * J)) * Q
+9. (K - J) * (A * Q)
+10. (K - J) / (A / Q)
+11. ((K - J) * A) * Q
+12. ((K - J) / A) * Q
+13. (K - (J * A)) * Q
+14. (K - (J / A)) * Q
+15. (K - J) * (Q * A)
+16. (K - J) * (Q / A)
+17. ((K - J) * Q) * A
+18. ((K - J) * Q) / A
+19. (Q * A) * (K - J)
+20. (Q / A) * (K - J)
+21. Q * ((A * K) - J)
+22. Q * (A * (K - J))
+23. Q / (A / (K - J))
+24. Q * ((K * A) - J)
+25. Q * ((K / A) - J)
+26. Q * (K - (A * J))
+27. (Q * (K - J)) * A
+28. (Q * (K - J)) / A
+29. Q * ((K - J) * A)
+30. Q * ((K - J) / A)
+31. Q * (K - (J * A))
+32. Q * (K - (J / A))
 
 Banyak solusi: 32
-Waktu eksekusi: 177 mikrodetik
+Waktu eksekusi: 125 mikrodetik
