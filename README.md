@@ -15,8 +15,7 @@ Repository Tugas Kecil 1 Mata Kuliah Strategi Algoritma
 ## General Information
 Sebuah program untuk memberikan seluruh solusi penyelesaian Permainan Kartu 24 sesuai dengan angka yang diberikan.
 Repository ini dibuat dan mengandung file yang dibutuhkan untuk menyelesaikan Tugas Kecil 1 IF2211 Strategi Algoritma.
-Contributors: 
-- 13521062 Go Dillon Audris
+Author: 13521062 Go Dillon Audris
 
 ## Languange Used
 - C++ Languange (100%)
