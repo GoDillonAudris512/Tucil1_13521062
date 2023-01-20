@@ -9,6 +9,39 @@
 using namespace std;
 using namespace std::chrono;
 
+bool isAlreadyPermute (int mat[][4], int arr[], int neff) {
+//  Mengembalikan true jika arr merupakan salah satu elemen array pada mat
+//  Mengembalikan false jika tidak
+
+//  KAMUS LOKAL
+    bool thereIs = false;
+    int i = 0;
+
+//  ALGORITMA
+    while (i < neff && !thereIs) {
+        if (mat[i][0] == arr[0] && mat[i][1] == arr[1] && mat[i][2] == arr[2] && mat[i][3] == arr[3]) {
+            thereIs = true;
+        }
+        else {
+            i++;
+        }
+    }
+
+    return thereIs;
+}
+
+void addElement (int mat[][4], int arr[], int neff) {
+//  I.S mat, arr, dan neff terdefinisi
+//  F.S Menambahkan arr sebagai salah satu elemen mat
+
+//  KAMUS LOKAL
+
+//  ALGORITMA
+    for (int i = 0; i < 4; i++) {
+        mat[neff][i] = arr[i];
+    }
+}
+
 float operation (float num1, int operand, float num2) {
 //  Mengembalikan hasil operasi antara num1 dan num2 dengan operand yang sesuai
 
@@ -93,9 +126,10 @@ string solve24 (int arr[]) {
 //  Mengembalikan string berisi semua solusi Permainan Kartu 24 dan banyaknya
 
 //  KAMUS LOKAL
-    int count = 0;
+    int count = 0, neff = 0;
     string solutions;
     int tempArr[4], operandArr[3];
+    int matArr[24][4];
 
 //  ALGORITMA
     cout << "\n==================================================\n\n";
@@ -118,21 +152,25 @@ string solve24 (int arr[]) {
                                 tempArr[1] = arr[j];
                                 tempArr[2] = arr[k];
                                 tempArr[3] = arr[l];
+                                
+                                if (!isAlreadyPermute(matArr, tempArr, neff)) {
+                                    addElement(matArr, tempArr, neff);
+                                    neff++;
+                                    for (int groupType = 1; groupType < 6; groupType++) {
+                                        for (int p = 1; p < 5; p++) {
+                                            for (int q = 1; q < 5; q++) {
+                                                for (int r = 1; r < 5; r++) {
+                                                    operandArr[0] = p;
+                                                    operandArr[1] = q;
+                                                    operandArr[2] = r;
 
-                                for (int groupType = 1; groupType < 6; groupType++) {
-                                    for (int p = 1; p < 5; p++) {
-                                        for (int q = 1; q < 5; q++) {
-                                            for (int r = 1; r < 5; r++) {
-                                                operandArr[0] = p;
-                                                operandArr[1] = q;
-                                                operandArr[2] = r;
-
-                                                if (isIt24(tempArr, groupType, operandArr)) {
-                                                    count++;
-                                                    solutions += to_string(count) + ". " + solutionStringGenerator(tempArr, groupType, operandArr) + "\n";
+                                                    if (isIt24(tempArr, groupType, operandArr)) {
+                                                        count++;
+                                                        solutions += to_string(count) + ". " + solutionStringGenerator(tempArr, groupType, operandArr) + "\n";
+                                                    }
                                                 }
-                                            }
-                                        }    
+                                            }    
+                                        }
                                     }
                                 }
                             }
