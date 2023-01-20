@@ -40,26 +40,33 @@ string solve24mode () {
 //  Mengembalikan pilihan mode yang dipilih (1-2)
 
 //  KAMUS LOKAL
+    int len;
     string temp;
     bool valid = false;
 
 //  ALGORITMA
+    cout << "==================================================\n";
     cout << "Selamat datang di 24 Solver. Silakan pilih mode yang anda inginkan: ";
     cout << "\n1. Input angka kartu oleh pengguna";
     cout << "\n2. Generate angka kartu secara random";
 
     while (!valid) {
         cout << "\nMasukkan pilihan mode (1-2): ";
-        cin >> temp;
-        if (temp == "1" || temp == "2") {
-            valid = true;
+        getline(cin, temp);
+        len = countWords(temp);
+        if (len == 1) {
+            if (temp == "1" || temp == "2") {
+                valid = true;
+            }
+            else {
+                cout << "Input tidak valid";
+            }
         }
         else {
             cout << "Input tidak valid";
         }
     }
 
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     return temp;
 }
 
@@ -168,16 +175,23 @@ void saveOpt (string text) {
 //  F.S solutions akan disimpan pada suatu file atau tidak disimpan
 
 //  KAMUS LOKAl
+    int len;
     string fileName, opt;
     bool valid = false;
     ofstream file;
 
 //  ALGORITMA
     while (!valid) {
-        cout << "\nApakah solusi ingin disimpan ke file (y/n) ? ";
-        cin >> opt;
-        valid = (opt == "y" or opt == "Y" or opt == "n" or opt == "N");
-        if (!valid) {
+        cout << "\nApakah solusi ingin disimpan ke file (Y/n) ? ";
+        getline(cin, opt);
+        len = countWords(opt);
+        if (len == 1) {
+            valid = (opt == "y" or opt == "Y" or opt == "n" or opt == "N");
+            if (!valid) {
+                cout << "Input tidak valid";
+            }
+        }
+        else {
             cout << "Input tidak valid";
         }
     }
@@ -186,8 +200,8 @@ void saveOpt (string text) {
         valid = false;
         while (!valid) {
             cout << "\nMasukkan nama file: ";
-            cin >> fileName;
-            valid = (fileName != "");
+            getline(cin, fileName);
+            valid = (countWords(fileName) != 0);
             if (!valid) {
                 cout << "Input tidak valid";
             }
@@ -200,7 +214,6 @@ void saveOpt (string text) {
 
         cout << "\nSolusi berhasil disimpan";
     }
-    else {
-        cout << "\nTerima kasih sudah menggunakan 24 Solver";
-    }
+    
+    cout << "\nTerima kasih sudah menggunakan 24 Solver";
 }
