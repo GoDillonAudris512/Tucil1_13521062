@@ -36,7 +36,7 @@ Author: 13521062 Go Dillon Audris
 │      main.exe
 │  
 ├───doc
-│      Tucil1_K2_13521062_Go Dillon Audris.pdf
+│      Tucil1_13521062_Go Dillon Audris_Revisi1.pdf
 │
 ├───src  
 │      converter.cpp
