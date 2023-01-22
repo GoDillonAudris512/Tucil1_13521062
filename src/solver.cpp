@@ -127,7 +127,7 @@ string solve24 (int arr[]) {
 
 //  KAMUS LOKAL
     int count = 0, neff = 0;
-    string solutions;
+    string solutions, temp = "";
     int tempArr[4], operandArr[3];
     int matArr[24][4];
 
@@ -138,7 +138,7 @@ string solve24 (int arr[]) {
         solutions += numToChar(arr[i]) + ", ";
     }
     solutions += numToChar(arr[3]);
-    solutions += "\n\nSolusi Permainan Kartu 24: \n";
+    temp += "\n\nSolusi Permainan Kartu 24: \n";
 
     auto start = high_resolution_clock::now();
     for (int i = 0; i < 4; i++) {
@@ -166,7 +166,7 @@ string solve24 (int arr[]) {
 
                                                     if (isIt24(tempArr, groupType, operandArr)) {
                                                         count++;
-                                                        solutions += to_string(count) + ". " + solutionStringGenerator(tempArr, groupType, operandArr) + "\n";
+                                                        temp += to_string(count) + ". " + solutionStringGenerator(tempArr, groupType, operandArr) + "\n";
                                                     }
                                                 }
                                             }    
@@ -184,14 +184,13 @@ string solve24 (int arr[]) {
     auto duration = duration_cast<microseconds>(stop-start);
     
     if (count == 0) {
-        solutions += "Tidak ada solusi yang mungkin\n";
+        temp = "\n\nTidak ada solusi yang mungkin\n";
     }
-    else {
-        solutions += "\nBanyak solusi: " + to_string(count);
-    }
-    solutions += "\nWaktu eksekusi: " + to_string(duration.count()) + " mikrodetik";
+    solutions += "\n\nBanyak solusi: " + to_string(count);
+    solutions += temp;
 
     cout << solutions;
+    cout << "\nWaktu eksekusi: " << to_string(duration.count()) << " mikrosekon";
     cout << "\n\n==================================================\n";
     return solutions;
 }

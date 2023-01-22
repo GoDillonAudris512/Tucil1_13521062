@@ -1,5 +1,7 @@
 Untuk susunan kartu: 2, 9, 10, 10
 
+Banyak solusi: 12
+
 Solusi Permainan Kartu 24: 
 1. (9 + (10 / 2)) + 10
 2. 9 + ((10 / 2) + 10)
@@ -13,6 +15,3 @@ Solusi Permainan Kartu 24:
 10. 10 + (9 + (10 / 2))
 11. (10 + (10 / 2)) + 9
 12. 10 + ((10 / 2) + 9)
-
-Banyak solusi: 12
-Waktu eksekusi: 78 mikrodetik

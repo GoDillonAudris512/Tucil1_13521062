@@ -1,8 +1,7 @@
 Untuk susunan kartu: 9, 4, 4, 2
 
+Banyak solusi: 2
+
 Solusi Permainan Kartu 24: 
 1. ((9 - 2) * 4) - 4
 2. (4 * (9 - 2)) - 4
-
-Banyak solusi: 2
-Waktu eksekusi: 60 mikrodetik

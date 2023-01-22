@@ -1,5 +1,7 @@
 Untuk susunan kartu: A, K, Q, J
 
+Banyak solusi: 32
+
 Solusi Permainan Kartu 24: 
 1. ((A * K) - J) * Q
 2. (A * (K - J)) * Q
@@ -33,6 +35,3 @@ Solusi Permainan Kartu 24:
 30. Q * ((K - J) / A)
 31. Q * (K - (J * A))
 32. Q * (K - (J / A))
-
-Banyak solusi: 32
-Waktu eksekusi: 125 mikrodetik

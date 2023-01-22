@@ -1,5 +1,7 @@
 Untuk susunan kartu: 10, K, 2, 6
 
+Banyak solusi: 22
+
 Solusi Permainan Kartu 24: 
 1. 10 + ((K - 6) * 2)
 2. (10 / 2) + (K + 6)
@@ -23,6 +25,3 @@ Solusi Permainan Kartu 24:
 20. (6 + K) + (10 / 2)
 21. 6 + (K + (10 / 2))
 22. (6 + 2) * (K - 10)
-
-Banyak solusi: 22
-Waktu eksekusi: 132 mikrodetik
